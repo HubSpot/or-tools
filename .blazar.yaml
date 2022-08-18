@@ -6,7 +6,5 @@ buildDeps:
 steps:
   - description: Build maven archive for or-tools
     commands:
-      - make archive_java
-  - description: Upload it
-    commands:
-      - upload-maven-signature
+      - cmake -S. -Bbuild -DBUILD_JAVA=ON
+      - cmake --build build --target java_package -v
