@@ -9,5 +9,4 @@ steps:
       - echo "set -e" >> $BUILD_COMMAND_RC_FILE
   - description: Build maven archive for or-tools
     commands:
-      - cmake -S "$WORKSPACE" -Bbuild -DBUILD_JAVA=ON
-      - cmake --build build --target java_package -v
+      - make archive_java
