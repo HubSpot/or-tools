@@ -4,7 +4,10 @@ buildDeps:
   - hs-build-tools
 
 steps:
+  - description: Enable debug
+    commands:
+      - echo "set -e" >> $BUILD_COMMAND_RC_FILE
   - description: Build maven archive for or-tools
     commands:
-      - cmake -S. -Bbuild -DBUILD_JAVA=ON
+      - cmake -S "$WORKSPACE" -Bbuild -DBUILD_JAVA=ON
       - cmake --build build --target java_package -v
