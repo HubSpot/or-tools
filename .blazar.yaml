@@ -1,0 +1,12 @@
+enabled: true
+
+buildDeps:
+  - hs-build-tools
+
+steps:
+  - description: Build maven archive for or-tools
+    commands:
+      - make archive_java
+  - description: Upload it
+    commands:
+      - upload-maven-signature
