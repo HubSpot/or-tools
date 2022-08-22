@@ -1,3 +1,6 @@
+NOTE: This is archived because we didn't end up needing to fork at all!
+
+
 # OR-Tools - Google Optimization Tools
 
 [![PyPI version](https://img.shields.io/pypi/v/ortools.svg)](https://pypi.org/project/ortools/)
